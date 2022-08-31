@@ -6,7 +6,6 @@ import {
   addUser,
   updateUser,
   removeUser,
-  getUsersUsers,
   // getOwnUsers,
   // addOwnUser,
   // updateOwnUser,
@@ -15,7 +14,7 @@ import {
 
 const router = express.Router();
 
-router.get("/:id?", getUsers).post("/user/:userid", getUsersUsers);
+router.get("/:id?", getUsers).post("/user/:userid", getUsers);
 
 // .post("/", addUser)
 // .put("/:id", updateUser)

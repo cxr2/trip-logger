@@ -11,7 +11,7 @@ export default function setupRoutes(app) {
 
   // Add routers (/api/v1/birds + url frag in router)
   app.use(`${API_ENDPOINT}/${API_VERSION}/places`, placesRouter);
-  app.use(`${API_ENDPOINT}/${API_VERSION}/users`, usersRouter);
+  app.use(`${API_ENDPOINT}/${API_VERSION}/users`, userRouter);
   app.use(`${API_ENDPOINT}/${API_VERSION}/trips`, tripsRouter);
 
   // Handle non-API gets
