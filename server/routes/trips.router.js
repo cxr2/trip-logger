@@ -11,7 +11,7 @@ import {
   // addOwnTrip,
   // updateOwnTrip,
   // removeOwnTrip,
-} from "../controllers/Trips.controller.js";
+} from "../controllers/trips.controller.js";
 
 const router = express.Router();
 
