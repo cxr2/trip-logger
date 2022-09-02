@@ -10,7 +10,7 @@ import {
   // addOwnUser,
   // updateOwnUser,
   // removeOwnUser,
-} from "../controllers/Users.controller.js";
+} from "../controllers/users.controller.js";
 
 const router = express.Router();
 
