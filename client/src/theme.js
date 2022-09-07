@@ -4,12 +4,12 @@ import red from "@mui/material/colors/red";
 let theme = createTheme({
   palette: {
     primary: {
-      main: "#E7F3F3",
-      contrastText: "#32A69B",
+      main: "#F8F1F1",
+      contrastText: "#282120",
     },
     secondary: {
-      main: "#fff",
-      contrastText: "#000",
+      main: "#F46E5B",
+      contrastText: "#FDFDFD",
     },
   },
 });

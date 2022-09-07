@@ -20,10 +20,11 @@ function Header() {
             sx={{
               my: 3,
               ml: 5,
-              color: "#32A69B",
+              color: "#282120",
               display: "block",
               fontSize: 26,
               fontWeight: "bold",
+              fontFamily: "Corben",
             }}
             component={NavLink}
             to="/"
@@ -39,9 +40,15 @@ function Header() {
           >
             {user ? (
               <Button
-                sx={{ my: 2, display: "block" }}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  fontFamily: "Nobile",
+                  fontWeight: 500,
+                }}
                 variant="contained"
                 color="secondary"
+                onClick={logoutFn}
               >
                 Logout
               </Button>
@@ -50,6 +57,7 @@ function Header() {
                 sx={{ my: 2, display: "block" }}
                 variant="contained"
                 color="secondary"
+                onClick={loginWithRedirect}
               >
                 Login
               </Button>
