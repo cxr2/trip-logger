@@ -1,6 +1,6 @@
 import express from "express";
 import "./database.js";
-import middlewareSetup from "./routes/index.js";
+import middlewareSetup from "./middleware.js";
 import setupRoutes from "./routes/index.js";
 
 const {} = process.env;
