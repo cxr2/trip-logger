@@ -24,6 +24,7 @@
     "@mui/material": "^5.10.3",
     "concurrently": "^7.3.0",
     "cross-env": "^7.0.3",
+    "lodash.intersection": "^4.4.0",
     "mongoose": "^6.5.4"
   }
 }
