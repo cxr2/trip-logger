@@ -8,8 +8,8 @@ let theme = createTheme({
       contrastText: "#32A69B",
     },
     secondary: {
-      main: red[50],
-      contrastText: red[900],
+      main: "#fff",
+      contrastText: "#000",
     },
   },
 });

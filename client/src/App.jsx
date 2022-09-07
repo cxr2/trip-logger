@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/system";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 // Theme
 import theme from "./theme";
@@ -13,27 +14,34 @@ import PageLayout from "./components/PageLayout";
 // Pages
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Profile from "./pages/Profile";
 
 // Data Contexts
-// import { CarsProvider } from "./contexts/car.context";
+
+//Auth0 Settings
+const AUTH0_DOMAIN = import.meta.env.VITE_AUTH0_DOMAIN;
+const AUTH0_CLIENT_ID = import.meta.env.VITE_AUTH0_CLIENT_ID;
 
 function App() {
   return (
     <>
       <Router>
-        <CssBaseline />
-        <ThemeProvider theme={theme}>
-          {/* <CarsProvider> */}
-          <Routes>
-            <Route path="/" element={<PageLayout />}>
-              <Route index element={<Home />} />
-              {/* <Route path="add" element={<AddCar />} />
-              <Route path="update/:id" element={<UpdateCar />} /> */}
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-          {/* </CarsProvider> */}
-        </ThemeProvider>
+        <Auth0Provider
+          domain={AUTH0_DOMAIN}
+          clientId={AUTH0_CLIENT_ID}
+          redirectUri={window.location.origin}
+        >
+          <CssBaseline />
+          <ThemeProvider theme={theme}>
+            <Routes>
+              <Route path="/" element={<PageLayout />}>
+                <Route index element={<Home />} />
+                <Route path="profile" element={<Profile />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </ThemeProvider>
+        </Auth0Provider>
       </Router>
     </>
   );
