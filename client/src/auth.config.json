@@ -1,0 +1,5 @@
+{
+  "domain": "cxr2.eu.auth0.com",
+  "clientId": "1y5k20nbMJ2u80I2trav7pvo3RwhVH5N",
+  "audience": "https://worldtripper.herokuapp.com/api/v1"
+}
