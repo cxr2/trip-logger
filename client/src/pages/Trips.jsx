@@ -2,13 +2,17 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import { TripsContext } from "./../contexts/trips.context";
-import { Button, Box, List } from "@mui/material";
-// import IconButton from "@mui/material";
-// import DeleteIcon from "@mui/material";
-// import Typography from "@mui/material";
+import {
+  Button,
+  IconButton,
+  Typography,
+  Box,
+  List,
+  ListItem,
+} from "@mui/material";
+import Delete from "@mui/icons-material/Delete";
 
-// import ListItem from "@mui/material";
-// // import EB from "../components/ErrorBoundary";
+// import EB from "../components/ErrorBoundary";
 
 function Trips() {
   const { fetchTrips, trips, loaded, loading, deleteTrip } =
@@ -23,9 +27,8 @@ function Trips() {
   });
 
   return (
-    // <EB>
     <div>
-      <h1>Trips</h1>
+      <Typography variant="h1">Trips</Typography>
       {/* <pre>
         <code>{JSON.stringify({ trips, loaded, loading })}</code>
       </pre> */}
@@ -63,7 +66,6 @@ function Trips() {
         </List>
       </Box>
     </div>
-    // </EB>
   );
 }
 

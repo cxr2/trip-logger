@@ -4,7 +4,6 @@ import Autocomplete from "@mui/material/Autocomplete";
 import Box from "@mui/material/Box";
 import { Controller } from "react-hook-form";
 // import { PlacesContext } from "./../../../contexts/places.context";
-// import EB from "./../../ErrorBoundary";
 
 const CountriesSelect = ({
   options = [],
@@ -17,7 +16,6 @@ const CountriesSelect = ({
   renderOption,
 }) => {
   return (
-    // <EB>
     <Controller
       render={(props) => (
         <>
@@ -43,7 +41,6 @@ const CountriesSelect = ({
       name={name}
       control={control}
     />
-    // </EB>
   );
 };
 
